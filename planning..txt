@@ -1,0 +1,42 @@
+
+
+models?
+routes?
+
+voting app functionality......................
+
+1. user sign in/ sign up
+2. List of candidates
+3. vote one of the candidate, only---one vote
+4. which shows the list of candidates  and their live vote counts sorted by their count
+5. user must contain one unique govt. id proof named: aadhar no.
+6. one admin to maintain the table of candidate and can't be able to vote
+7. user can change ther password
+8. user can change their password
+9. user can login only with aadhar card number and password
+
+
+-----------------------------------------------------------
+
+Routes
+
+user Authentication
+    /signup : POST -- CREATE a new account
+    /login : POST -- Log in to existing account. [ aadhar no. + phone no.]
+
+Voting:
+    /candidate : GET - Get list of candidate
+    /vote/:candidate: POST - Vote for a specific candidate.
+
+Vote Counts:
+    /vote/counts: GET - Get the list of candidates sorted by their vote counts.
+
+User Profile : 
+    /Profile: GET - Get the user's Profile information
+    /Profile/password : PUT - change the user password
+
+Admin candidate Management : 
+    /candidates: POST- Create a new candidate
+    /candidates/:candidateID: PUT - Update an existing candidate.
+    /candidates/:candidateID: DELETE- Delete a candidate from a list
+ 
